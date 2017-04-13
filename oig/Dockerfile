@@ -1,4 +1,4 @@
-FROM debian-squeeze
+FROM pj1031999/debian-squeeze
 MAINTAINER Paweł Jasiak <pj1031999@gmail.com>
 
 RUN apt-get update && apt-get install -y  \
