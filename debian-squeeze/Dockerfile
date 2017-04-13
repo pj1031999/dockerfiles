@@ -5,3 +5,6 @@ COPY ./sources.list /etc/apt/sources.list
 COPY ./90ignore-release-date /etc/apt/apt.conf.d/90ignore-release-date
 
 RUN apt-get update && apt-get upgrade -y && rm -rf /var/lib/apt/lists/*
+
+WORKDIR /root
+ENTRYPOINT /bin/bash
