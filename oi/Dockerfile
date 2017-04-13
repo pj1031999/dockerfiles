@@ -22,7 +22,9 @@ RUN wget -O oitimetool.zip https://github.com/olimpiada/oitimetool-bin/archive/m
     && wget  http://software.intel.com/sites/landingpage/pintool/downloads/pin-2.14-71313-gcc.4.4.7-linux.tar.gz \
     && tar xf pin-2.14-71313-gcc.4.4.7-linux.tar.gz \
     && rm pin-2.14-71313-gcc.4.4.7-linux.tar.gz \
-    && mv pin-2.14-71313-gcc.4.4.7-linux ./oitimetool-bin-master/
+    && mv pin-2.14-71313-gcc.4.4.7-linux ./oitimetool-bin-master/ \
+    && mv ./oitimetool-bin-master /root/oitimetool \
+    && rm oitimetool.zip
 
 
 WORKDIR /root
