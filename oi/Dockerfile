@@ -24,7 +24,8 @@ RUN wget --no-check-certificate -O oitimetool.zip https://github.com/olimpiada/o
     && rm pin-2.14-71313-gcc.4.4.7-linux.tar.gz \
     && mv pin-2.14-71313-gcc.4.4.7-linux ./oitimetool-bin-master/ \
     && mv ./oitimetool-bin-master /root/oitimetool \
-    && rm oitimetool.zip
+    && rm oitimetool.zip    \
+    && echo "CXXFLAGS   := -O2 -m32 -static -lm -std=c++11" >> Makefile 
 
 
 WORKDIR /root
