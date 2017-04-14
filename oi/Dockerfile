@@ -25,7 +25,10 @@ RUN wget --no-check-certificate -O oitimetool.zip https://github.com/olimpiada/o
     && mv pin-2.14-71313-gcc.4.4.7-linux ./oitimetool-bin-master/ \
     && mv ./oitimetool-bin-master /root/oitimetool \
     && rm oitimetool.zip    \
-    && echo "CXXFLAGS   := -O2 -m32 -static -lm -std=c++11" >> ~/Makefile 
+    && echo "CC :=  gcc" >> ~/Makefile  \
+    && echo "CXX    :=  g++" >> ~/Makefile  \
+    && echo "CFLAGS    :=  -O2 -m32 -static -lm -std=gnu99" >> ~/Makefile \
+    && echo "CXXFLAGS   :=  -O2 -m32 -static -lm -std=c++11" >> ~/Makefile 
 
 
 WORKDIR /root
