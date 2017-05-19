@@ -7,7 +7,6 @@ RUN apt update && apt upgrade -y && apt install -t experimental -y \
 	apt update && \
 	apt install -t experimental -y \
 	wine32 \
-    winetricks \
     wine-development \
     wine64 \
     wine64-development \
