@@ -8,9 +8,6 @@ RUN apt update && apt upgrade -y && apt install -t experimental -y \
 	apt install -t experimental -y \
 	wine32 \
     wine-development \
-    wine64 \
-    wine64-development \
-    wine64-tools \
     fonts-wine  \
     wine32-tools \
 	--no-install-recommends \
